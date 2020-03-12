@@ -9,9 +9,18 @@ public abstract class Personnage implements Combattant {
 	private int sante;
 	private int niveauExp;
 	private int prochainNiveau;
+	private int santeMax;
 	private HashSet<Sort> sorts;
 
 	private static double facteurNiveauSuivant = 1.5;
+
+	public int getSanteMax() {
+		return santeMax;
+	}
+
+	public void setSanteMax(int santeMax) {
+		this.santeMax = santeMax;
+	}
 
 	private Personnage() {
 		this.niveau = 1;
@@ -23,6 +32,7 @@ public abstract class Personnage implements Combattant {
 	protected Personnage(int sante) {
 		this();
 		this.sante = sante;
+		this.setSanteMax(sante);
 	}
 
 	public int getNiveau() {

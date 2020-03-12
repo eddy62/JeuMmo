@@ -1,6 +1,6 @@
 package src.main;
 
-public class Regeneration extends Thread{
+public class Regeneration extends Thread {
     Joueur perso;
     int attente;
 

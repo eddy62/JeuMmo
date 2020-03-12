@@ -1,0 +1,57 @@
+
+Wsquid:S2259{"@A "NullPointerException" could be thrown; "os" is nullable here.(œñÑ
+esquid:S2095—"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¥ËÇ
+T
+squid:S106}"9Replace this use of System.out or System.err by a logger.(Éê´Ğıÿÿÿÿ
+Fsquid:S2093m"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+O
+squid:S106<"9Replace this use of System.out or System.err by a logger.(ªŒçÚ
+Esquid:S1068")Remove this unused "carte" private field.(‚Úàüÿÿÿÿ
+Nsquid:S1135u"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+P
+squid:S106¥"9Replace this use of System.out or System.err by a logger.(¤¯‡è
+lsquid:S2095o"PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(Å´Ë½úÿÿÿÿ
+T
+squid:S106$"9Replace this use of System.out or System.err by a logger.(˜êë¶üÿÿÿÿ
+Gsquid:S1481¬"(Remove this unused "cnx" local variable.(³İ§8õÕ˜ÇŒ.
+T
+squid:S1067"9Replace this use of System.out or System.err by a logger.(„Ÿşÿÿÿÿ
+Rsquid:S1141š"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+?squid:S1148v"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Vsquid:S1854¬"7Remove this useless assignment to local variable "cnx".(³İ§8õÕ˜ÇŒ.
+P
+squid:S106£"9Replace this use of System.out or System.err by a logger.(¶’‘æ
+Wsquid:S2259z"@A "NullPointerException" could be thrown; "fs" is nullable here.(¦š¦è
+]squid:UnusedPrivateMethodd"1Remove this unused private "creerMonstre" method.(ïÒï8Í¶œÇŒ.
+{squid:S4165w"dRemove this useless assignment; "result" already holds the assigned value along all execution paths.(ˆáŒƒ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÜÎÆÅ
+P
+squid:S106„"9Replace this use of System.out or System.err by a logger.(Ä¯¥€
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ò¼Òøÿÿÿÿ
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(³ãÉÀ
+P
+squid:S106…"9Replace this use of System.out or System.err by a logger.(ßŒÌ
+O
+squid:S106'"9Replace this use of System.out or System.err by a logger.(¼Ë›Ò
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ä¯¥€
+lsquid:S2095˜"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(®ã¸Íûÿÿÿÿ
+jsquid:CommentedOutCodeLine¯"<This block of commented-out lines of code should be removed.(öìº8Í¶œÇŒ.
+?squid:S2189›""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ
+csquid:CommentedOutCodeLine‹"<This block of commented-out lines of code should be removed.(à‚½
+_squid:S1126+"AReplace this if-then-else statement by a single return statement.(½åÄê8˜Ö¾ÿŒ.
+usquid:S37761"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Ë¥ƒêùÿÿÿÿ8˜Ö¾ÿŒ.
+V
+squid:S106R"9Replace this use of System.out or System.err by a logger.(Ş·¾Á8˜Ö¾ÿŒ.
+[
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(¨ØÍÃşÿÿÿÿ8˜Ö¾ÿŒ.
+V
+squid:S106["9Replace this use of System.out or System.err by a logger.(¢¦Û¥8˜Ö¾ÿŒ.
+[
+squid:S106]"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8˜Ö¾ÿŒ.
+Csquid:S2440«"$Remove this instantiation of "CRUD".(–êÓ8˜Ö¾ÿŒ.
+Tsquid:S2209¬"5Change this instance-reference to a static reference.(³İ§8˜Ö¾ÿŒ.
+Isquid:S14815"&Remove this unused "j" local variable.(²µäîûÿÿÿÿ8˜Ö¾ÿŒ.
+csquid:UnusedPrivateMethod""2Remove this unused private "ajouterJoueur" method.(â¡øúÿÿÿÿ8˜Ö¾ÿŒ.
+isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(Å÷È8˜Ö¾ÿŒ.

@@ -1,0 +1,12 @@
+
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ç…Çæıÿÿÿÿ
+N
+squid:S1066"9Replace this use of System.out or System.err by a logger.(ÀÍ²
+T
+squid:S106C"9Replace this use of System.out or System.err by a logger.(Ûæ¶¨ùÿÿÿÿ
+Zsquid:UselessImportCheck"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ
+T
+squid:S106I"9Replace this use of System.out or System.err by a logger.(Ì¨Œûÿÿÿÿ
+‹squid:S1319R"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(›´†Ñ8î¿ÿŒ.
+Jsquid:S1948"'Make "sorts" transient or serializable.(ò‚­ûÿÿÿÿ8î¿ÿŒ.
+Xsquid:S1161A":Add the "@Override" annotation above this method signature(ææ±‚8î¿ÿŒ.

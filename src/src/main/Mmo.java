@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -35,37 +39,63 @@ public class Mmo implements Serializable {
 		System.out.println("Le joueur " + j + " n'a pas été ajouté (le pseudo existe déja).");
 		return false;
 	}
+		private boolean load(String pseudo) throws SQLException, ClassNotFoundException {
+		if (CRUD.recupIdParPseudo(pseudo) != null) {
+			return true;
+		}
+		return false;
+	}
 
-	private void creerJoueur() {
+	private void creerJoueur() throws SQLException, ClassNotFoundException {
 		String choixPseudo;
 		String choixPersonnage = null;
 		Personnage personnage = null;
 		Joueur j;
-		do {
-			System.out.println("Veuillez entrer votre pseudo :");
-			choixPseudo = sc.next();
+
+		System.out.println("Veuillez entrer votre pseudo :");
+		choixPseudo = sc.next();
+		if (!load(choixPseudo)) {
 			choixPersonnage = null;
 			while (choixPersonnage == null) {
 				System.out.println("Quelle personnage voulez-vous jouer ?\n\t1 - Archer\n\t2 - Soldat\n\t3 - Sorcier");
 				choixPersonnage = sc.next();
 				switch (choixPersonnage) {
-				case "1":
-					personnage = new Archer();
-					break;
-				case "2":
-					personnage = new Soldat();
-					break;
-				case "3":
-					personnage = new Sorcier();
-					break;
-				default:
-					choixPersonnage = null;
-					break;
+					case "1":
+						personnage = new Archer();
+						break;
+					case "2":
+						personnage = new Soldat();
+						break;
+					case "3":
+						personnage = new Sorcier();
+						break;
+					default:
+						choixPersonnage = null;
+						break;
 				}
 			}
-			j = new Joueur(choixPseudo, personnage);
-		} while (!ajouterJoueur(j));
+			/*j = new Joueur(choixPseudo, personnage);*/
+
+			CRUD.InsertJoueur(choixPseudo);
+			CRUD.InsertPersonnage(personnage, CRUD.recupIdParPseudo(choixPseudo));
+		} else {
+			System.out.println("personnage existe");
+			ResultSet r = CRUD.getperso(CRUD.recupIdParPseudo(choixPseudo));
+			ResultSetMetaData rsmd = r.getMetaData();
+			int columnsNumber = rsmd.getColumnCount();
+			while (r.next()) {
+
+				for (int i = 1; i <= columnsNumber; i++) {
+					if (i > 1) System.out.print(",  ");
+					String columnValue = r.getString(i);
+					System.out.print(columnValue + " " + rsmd.getColumnName(i));
+				}
+				System.out.println("");
+
+			}
+		}
 	}
+
 
 	private void creerMonstre() {
 		this.monstres.add(new Troll());
@@ -137,8 +167,12 @@ public class Mmo implements Serializable {
 		return result;
 	}
 
-	public static void main(String[] args) {
-		Mmo mmo = Mmo.restaurer();
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		CRUD con = new CRUD();
+		Connection cnx = con.ConnectBdd();
+		Mmo mmo = new Mmo();
+		mmo.creerJoueur();
+		/*Mmo mmo = Mmo.restaurer();
 		if (mmo == null) { // Si il y a pas de récupération possible
 			mmo = new Mmo();
 			mmo.creerJoueur();
@@ -149,6 +183,6 @@ public class Mmo implements Serializable {
 		regen.setDaemon(true);
 		regen.start();
 		mmo.jouer();
-		mmo.sauvegarder();
+		mmo.sauvegarder();*/
 	}
 }
